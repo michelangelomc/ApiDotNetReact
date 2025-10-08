@@ -84,3 +84,5 @@ AlunosModelDB/DomainModelDesing/obj/Debug/net9.0/*
 AlunosModelDB/ApiDomain/obj/ApiDomain.csproj.nuget.g.props
 AlunosModelDB/DomainModelDesing/obj/project.assets.json
 AlunosModelDB/DomainModelDesing/obj/project.nuget.cache
+*.resx
+*.vsidx
