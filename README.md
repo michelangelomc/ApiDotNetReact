@@ -1,5 +1,9 @@
 # ApiDotNetReact
 Integração API .NetCore9 com React
+- Estudo de como integrar o React com .Net9
+- Clean Code
+- Arquitetura Limpa
+- Segregação de responsabilidades
 
 echo "# ApiDotNetReact" >> README.md
 git init
