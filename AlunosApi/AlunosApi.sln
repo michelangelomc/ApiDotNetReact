@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlunosApi", "AlunosApi\AlunosApi.csproj", "{C72A82D0-F0CD-4F8A-8F83-F6ACBBED9996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelORM", "..\AlunosModelDB\ModelORM\ModelORM.csproj", "{7D312BAA-C81A-14A7-C3C9-1A37CCE96E4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72A82D0-F0CD-4F8A-8F83-F6ACBBED9996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72A82D0-F0CD-4F8A-8F83-F6ACBBED9996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72A82D0-F0CD-4F8A-8F83-F6ACBBED9996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72A82D0-F0CD-4F8A-8F83-F6ACBBED9996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D312BAA-C81A-14A7-C3C9-1A37CCE96E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D312BAA-C81A-14A7-C3C9-1A37CCE96E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D312BAA-C81A-14A7-C3C9-1A37CCE96E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D312BAA-C81A-14A7-C3C9-1A37CCE96E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1F444CB-0F8C-4F36-91CD-3D7469172AFA}
+	EndGlobalSection
+EndGlobal
