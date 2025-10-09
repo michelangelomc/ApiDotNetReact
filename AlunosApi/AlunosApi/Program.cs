@@ -1,7 +1,9 @@
+using ModelORM.InjectionDependence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+InfrasInjectionDependece.RegInfraInjectionServices(builder.Services);
 builder.Services.AddControllers();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

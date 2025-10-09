@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\AlunosModelDB\ModelORM\ModelORM.csproj" />
+  </ItemGroup>
+
 </Project>
