@@ -4,9 +4,9 @@ using ModelORM.Repository.UnitOfWork;
 
 namespace ModelORM.InjectionDependence
 {
-    public static class InfrasInjectionDependece
+    public static class ModelsDI
     {
-        public static void RegInfraInjectionServices(IServiceCollection services)
+        public static void RegModelsServices(IServiceCollection services)
         {
             services.AddScoped(typeof(IMainRepositoy<>), typeof(MainRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
