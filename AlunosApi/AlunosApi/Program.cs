@@ -1,5 +1,5 @@
+using AlunosApi.ExtensionsClass;
 using Infrastructure.InjectionDependecy;
-using Microsoft.AspNetCore.Builder;
 using ModelORM.ExtensionConnDB;
 using ModelORM.InjectionDependence;
 
@@ -21,7 +21,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsProduction())
@@ -30,8 +30,10 @@ if (!app.Environment.IsProduction())
     app.UseSwaggerUI();
 }
 
+CorsExtension.AddCorsConfiguration(app);
+
 app.UseHttpsRedirection();
-///TODO app.UseAuthorization();
+app.UseAuthorization();
 
 app.MapControllers();
 app.Run();

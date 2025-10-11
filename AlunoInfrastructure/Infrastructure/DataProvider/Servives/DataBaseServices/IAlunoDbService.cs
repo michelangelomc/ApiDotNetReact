@@ -8,5 +8,6 @@ namespace Infrastructure.DataProvider.Servives.DataBaseServices
         Task<AlunoModel> Create(AlunoModel entity);
         Task<AlunoModel> Delete(Int64 id);
         Task<AlunoModel> Update(AlunoModel entity);
+        Task<List<AlunoModel>> GetAll();
     }
 }

@@ -26,6 +26,19 @@ namespace AlunosApi.Controllers
             return Ok(alunosRet);
         }
 
+        [HttpGet(Name = "all")]
+        public async Task<ActionResult<IAsyncEnumerable<AlunoModel>>> GetAlunos()
+        {
+            List<AlunoModel> alunosRet = await alunoDbService.GetAll();
+            if (alunosRet == null)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, $"Nenhum aluno encontrado!");
+            }
+
+            return Ok(alunosRet);
+        }
+
+
         [HttpPost]
         public async Task<ActionResult<IAsyncResult>> PostAluno([FromBody] AlunoModel aluno)
         {
