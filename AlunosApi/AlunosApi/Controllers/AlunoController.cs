@@ -42,6 +42,12 @@ namespace AlunosApi.Controllers
         [HttpPost]
         public async Task<ActionResult<IAsyncResult>> PostAluno([FromBody] AlunoModel aluno)
         {
+
+            if (aluno is null)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, "Não é possivel incluir um registor nulo|sem valor.");
+            }
+
             AlunoModel newAluno = await alunoDbService.Create(aluno);
 
             if (newAluno == null)
@@ -53,7 +59,7 @@ namespace AlunosApi.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult<IActionResult>> PutAluno([FromQuery] Int64 id, [FromBody] AlunoModel aluno)
+        public async Task<ActionResult> PutAluno(Int64 id, [FromBody] AlunoModel aluno)
         {
             if (aluno is null || id != aluno.Id)
             {
@@ -67,12 +73,16 @@ namespace AlunosApi.Controllers
                 return StatusCode(StatusCodes.Status204NoContent, aluno);
             }
 
+            alunoEnc.Nome = aluno.Nome;
+            alunoEnc.Email = aluno.Email;
+            alunoEnc.Idade = aluno.Idade;
+
             AlunoModel editAluno = await alunoDbService.Update(alunoEnc);
 
             return StatusCode(StatusCodes.Status202Accepted, aluno);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteAluno(Int64 id)
         {
             if (id <= 0)
