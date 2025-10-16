@@ -52,6 +52,23 @@ namespace ModelORM.Repository
             }
         }
 
+        public async Task<List<T>> GetAll()
+        {
+            try
+            {
+                List<T> result = await this.context.Set<T>().ToListAsync();
+                return result;
+            }
+            catch (MySqlException mx)
+            {
+                throw new Exception(mx.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<T> GetById(long id)
         {
             try
