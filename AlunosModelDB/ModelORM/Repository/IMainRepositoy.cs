@@ -6,5 +6,6 @@
         Task<T> Create(T entity);
         Task<T> Delete(Int64 id);
         Task<T> Update(T entity);
+        Task<List<T>> GetAll();
     }
 }

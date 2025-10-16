@@ -21,6 +21,11 @@ namespace Infrastructure.DataProvider.Servives.DataBaseServices
             return await this.unitOfWork.AlunoRepository.Delete(id);
         }
 
+        public Task<List<AlunoModel>> GetAll()
+        {
+            return this.unitOfWork.AlunoRepository.GetAll();
+        }
+
         public async Task<AlunoModel> GetById(long id)
         {
             return await this.unitOfWork.AlunoRepository.GetById(id);
