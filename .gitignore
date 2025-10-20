@@ -138,3 +138,7 @@ AlunoInfrastructure/Infrastructure/obj/Debug/net9.0/refint/Infrastructure.dll
 AlunosApi/.vs/AlunosApi/v17/DocumentLayout.backup.json
 AlunosApi/.vs/AlunosApi/v17/DocumentLayout.json
 AlunosApi/.vs/AlunosApi/v17/DocumentLayout.json
+AlunoInfrastructure/Infrastructure/obj/Debug/*
+AlunoInfrastructure/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json
+AlunosApi/.vs/AlunosApi/v17/DocumentLayout.backup.json
+AlunosApi/.vs/AlunosApi/v17/DocumentLayout.json
