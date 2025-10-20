@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ModelORM.Infrastructure
 {
@@ -13,8 +14,7 @@ namespace ModelORM.Infrastructure
         {
             DbContextOptionsBuilder<AppDbContext> optBuilder = new();
             ServerVersion serverVersion = ServerVersion.AutoDetect(CONNECT_STRING);
-            optBuilder.UseMySql(CONNECT_STRING, serverVersion);
-
+            optBuilder.UseMySql(CONNECT_STRING, serverVersion, m => m.MigrationsAssembly("ModelORM"));
             return new AppDbContext(optBuilder.Options);
         }
     }

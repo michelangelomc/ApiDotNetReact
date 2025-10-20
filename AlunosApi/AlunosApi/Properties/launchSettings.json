@@ -8,6 +8,11 @@
       "sslPort": 44379
     }
   },
+  "JWT": {
+    "Key": "#@#@luno2025",
+    "Issuer": "https://localhost:7245",
+    "Audience": "https://localhost:7245"
+  },
   "profiles": {
     "http": {
       "commandName": "Project",

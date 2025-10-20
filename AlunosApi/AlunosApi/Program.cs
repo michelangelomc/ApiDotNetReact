@@ -8,6 +8,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 #region Extensions
 string strConnection = builder.Configuration.GetConnectionString("DefaulConnection")!;
 DBExtensionsProgram.UseMySqlConfiguration(builder.Services, builder);
+JwtExtension.AddJwtConfiguration(builder.Services, builder);
 #endregion
 
 // Add services to the container.
@@ -33,6 +34,7 @@ if (!app.Environment.IsProduction())
 CorsExtension.AddCorsConfiguration(app);
 
 app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

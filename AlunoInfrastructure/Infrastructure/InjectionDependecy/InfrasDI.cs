@@ -8,6 +8,7 @@ namespace Infrastructure.InjectionDependecy
         public static void RegInfrasServices(IServiceCollection services)
         {
             services.AddScoped<IAlunoDbService, AlunoDbService>();
+            services.AddScoped<IAuthenticate, Authenticate>();
         }
     }
 }
